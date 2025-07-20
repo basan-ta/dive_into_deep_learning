@@ -1,4 +1,4 @@
-# 🧠 Dive into Deep Learning - Study Repository
+# Dive into Deep Learning - Study Repository
 
 [![GitHub stars](https://img.shields.io/github/stars/basan-ta/dive_into_deep_learning?style=social)](https://github.com/basan-ta/dive_into_deep_learning/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -18,5 +18,3 @@ This repository contains my personal implementations, experiments, and notes whi
 - Interactive Jupyter notebooks with runnable code
 - Mathematical foundations with practical implementations
 - Real-world applications and case studies
-
-## 🚀 Repository Structure
