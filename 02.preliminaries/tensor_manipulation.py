@@ -16,3 +16,19 @@ print("subtraction:", a - b)
 print("multiplication:", a * b)
 print("division:", a / b)
 print("power:", a ** 2) 
+
+
+p = torch.arange(12, dtype=torch.float32).reshape(3, 4)
+q = torch.tensor([[1, 2, 3, 4],
+                  [5, 6, 7, 8],
+                  [9, 10, 11, 12]])
+
+'''Concatenate along the first dimension, 
+dim=0 --> stack rows vertically (row direction).
+Both tensors have 3 rows, so result = 6 rows × 4 columns.'''
+print(torch.cat((p, q), dim=0))
+
+''' Concatenate along the second dimension  
+dim=1 --> stack columns horizontally.
+Both tensors have 4 columns, so result = 3 rows × 8 columns.'''
+print(torch.cat((p, q), dim=1))
