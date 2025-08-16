@@ -15,4 +15,16 @@ x = x.reshape(3, 4)
 #for shape of the tensor
 print(x.shape)
 
-print(x)    
+print(x) 
+
+#create y tensor with zeros as all elements
+y = torch.zeros((2,3,4))   
+print(y)
+
+''' First dimension = 2 →  2 blocks 
+    second dimension = 3 → each block has 3 rows
+    Third dimension = 4 → each row has 4 columns 
+    '''
+#create z tensor with ones as all elements
+z = torch.ones((2,3,4))
+print(z)
