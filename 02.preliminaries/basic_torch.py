@@ -28,3 +28,7 @@ print(y)
 #create z tensor with ones as all elements
 z = torch.ones((2,3,4))
 print(z)
+
+#create random values tensor
+random_tensor = torch.rand((2,4,6))
+print(random_tensor)
