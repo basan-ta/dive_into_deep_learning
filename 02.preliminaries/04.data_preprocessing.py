@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 # Make directory
 os.makedirs(os.path.join('..', 'data'), exist_ok=True)
 # File path
@@ -20,10 +21,22 @@ with open(data_file, 'w') as f:
 1,Flat,40000
 2,Mansard,70000
 3,Gable,80000
-4,Gambrel,125000
-5,Flat,160000
+,Gambrel,125000
+,Flat,160000
 2,Gable,62000
 6,Hip,210000
 3,Mansard,100000
 4,Flat,140000
 """)
+    
+data = pd.read_csv(data_file)
+
+'''inputs: all rows of the first two columns (features)
+targets: all rows of the third column (labels)'''
+inputs, targets = data.iloc[:, 0:2], data.iloc[:,2]
+inputs = pd.get_dummies(inputs, dummy_na=True)
+print("Inputs:\n", inputs)
+
+#two field in NaN so filling it with mean value of corresponding column
+inputs = inputs.fillna(inputs.mean())
+print("Inputs after filling NaN with mean:\n", inputs)
