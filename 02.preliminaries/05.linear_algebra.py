@@ -31,3 +31,16 @@ print(B == B.T)
 #tensor with higher order
 P = torch.arange(24).reshape(2,3,4)
 print(P)
+
+#copy the tensor and perform Tensor Arithmetic 
+A = torch.arange(6, dtype = torch.float32).reshape(3,2)
+B = A.clone()
+print(A)
+print(A+B)
+print(A*B)
+
+#multiplying tensor with scalar
+o = 2
+print(o + A)
+print(o * A)
+print((o*A).shape)
