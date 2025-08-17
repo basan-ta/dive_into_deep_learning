@@ -1,5 +1,7 @@
 import os
 import pandas as pd
+import torch
+
 # Make directory
 os.makedirs(os.path.join('..', 'data'), exist_ok=True)
 # File path
@@ -40,3 +42,9 @@ print("Inputs:\n", inputs)
 #two field in NaN so filling it with mean value of corresponding column
 inputs = inputs.fillna(inputs.mean())
 print("Inputs after filling NaN with mean:\n", inputs)
+
+#loading into tensor 
+x = torch.tensor(inputs.to_numpy(dtype=float))
+y = torch.tensor(targets.to_numpy(dtype=float))
+print(x)
+print(f"Targets into tenor:\n",y)
