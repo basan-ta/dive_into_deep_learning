@@ -27,3 +27,7 @@ B = torch.tensor([[1,2,3],[2,0,4],[3,4,5]])
 print(B)
 #condition to be symmetric is B.T = B 
 print(B == B.T)
+
+#tensor with higher order
+P = torch.arange(24).reshape(2,3,4)
+print(P)
