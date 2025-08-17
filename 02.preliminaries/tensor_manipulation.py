@@ -32,3 +32,14 @@ print(torch.cat((p, q), dim=0))
 dim=1 --> stack columns horizontally.
 Both tensors have 4 columns, so result = 3 rows × 8 columns.'''
 print(torch.cat((p, q), dim=1))
+
+
+#conversion between numpy and torch
+import numpy as np
+a = np.array([[1, 2, 3], [4, 5, 6]])
+b = torch.from_numpy(a)  
+print(type(a), type(b))
+
+# Converting back to numpy
+c = b.numpy()
+print("Converted back to Numpy array:\n", c)    
