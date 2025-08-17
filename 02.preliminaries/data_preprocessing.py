@@ -1,0 +1,29 @@
+import os
+# Make directory
+os.makedirs(os.path.join('..', 'data'), exist_ok=True)
+# File path
+data_file = os.path.join("..", 'data', 'house_tiny.csv')
+
+with open(data_file, 'w') as f:
+    f.write("""NumRooms,RoofType,Price
+1,Gable,50000
+2,Hip,65000
+3,Gambrel,70000
+2,Flat,55000
+4,Mansard,120000
+3,Gable,85000
+5,Hip,150000
+2,Gambrel,60000
+6,Flat,200000
+4,Gable,130000
+3,Hip,95000
+1,Flat,40000
+2,Mansard,70000
+3,Gable,80000
+4,Gambrel,125000
+5,Flat,160000
+2,Gable,62000
+6,Hip,210000
+3,Mansard,100000
+4,Flat,140000
+""")
