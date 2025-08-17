@@ -14,3 +14,16 @@ print(a[2]) #access second element of a ("2")
 #len and shape 
 print(f"length\n ",len(a))
 print(f"shape\n", a.shape)
+
+'''scalars are 0-th order tensor, vector are 1-st order tensor and matrices are the 2-nd order tensor  '''
+
+A = torch.arange(6).reshape(3,2)
+print(A)
+#transpose of matrix 
+print(A.T)
+
+#symmetric matrix
+B = torch.tensor([[1,2,3],[2,0,4],[3,4,5]])
+print(B)
+#condition to be symmetric is B.T = B 
+print(B == B.T)
